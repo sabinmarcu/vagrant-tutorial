@@ -1,0 +1,14 @@
+<nav class="main-nav">
+    {% if page.url != "/index.html" %}
+        <a href='{{ site.baseurl }}{{ page.about }}' class="cta"> <span class="arrow">←</span> Home </a>
+    {% endif %}
+
+    <a href="//infoeducatie.ro">InfoEducatie</a>
+    <a href="//infoeducatie.ro/contestants">Participanti</a>
+    <a href="//infoeducatie.ro/jury">Juriu</a>
+    {% if page.url != "/about/" %}
+        {% if site.aboutPage %}
+            <a href='{{ site.baseurl }}about' class="cta">About </a>
+        {% endif %}
+    {% endif %}
+</nav>

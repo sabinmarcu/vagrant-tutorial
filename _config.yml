@@ -1,0 +1,35 @@
+name: Vagrant Tutorial
+description: Blogging about stuffs
+meta_description: "A simple tutorial for using Vagrant"
+
+aboutPage: true
+
+markdown: redcarpet
+highlighter: pygments
+
+paginate: 20
+baseurl: /
+domain_name: 'http://sabinmarcu.github.io/vagrant-tutorial'
+google_analytics: 'UA-XXXXXXXX-X'
+disqus_shortname: 'your-disqus-shortname'
+
+# Details for the RSS feed generator
+url:            'http://infoeducatie.ro'
+author:         'InfoEducatie'
+authorTwitter:  'sabinmarcu'
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post

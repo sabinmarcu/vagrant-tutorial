@@ -1,0 +1,8 @@
+---
+profile: false
+---
+
+{% capture inc %}{% include article.md %}{% endcapture %}
+{{ inc | markdownify }}
+
+{% include footer.html %}
