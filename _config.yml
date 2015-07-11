@@ -7,8 +7,8 @@ aboutPage: true
 markdown: redcarpet
 highlighter: pygments
 
-baseurl: /
-domain_name: 'http://sabinmarcu.github.io/vagrant-tutorial'
+baseurl: /vagrant-tutorial
+domain_name: 'http://sabinmarcu.github.io'
 google_analytics: 'UA-XXXXXXXX-X'
 disqus_shortname: 'your-disqus-shortname'
 
