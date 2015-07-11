@@ -4,10 +4,15 @@ permalink: about/
 profile: false
 ---
 
-# About authors    
+# About authors
 
 ---
 
+{% comment %}
+
+  No words to describe this
+
+{% endcomment %}
 
 ```js
 // TODO

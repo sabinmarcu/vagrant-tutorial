@@ -622,6 +622,28 @@ h2.month {
   margin-left: 2px;
 }
 
+.toc {
+	margin: 25px 0;
+}
+
+.toc ol li {
+	padding-left: 15px;
+}
+
+.toc > ol > li {
+	border-top: solid 1px #eee;
+	padding-top: 5px;
+	margin-top: 10px;
+}
+
+.toc ol, .toc ol li {
+	list-style-type: upper-roman;
+}
+
+.toc ol ol, .toc ol ol li {
+	list-style-type: decimal;
+}
+
 /* Media Queries */
 @media screen and (max-width: 540px) {
 	#wrapper { padding:20px 20px 20px 20px;}
