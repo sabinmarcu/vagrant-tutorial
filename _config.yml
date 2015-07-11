@@ -14,8 +14,8 @@ disqus_shortname: 'your-disqus-shortname'
 
 # Details for the RSS feed generator
 url:            'http://infoeducatie.ro'
-author:         'InfoEducatie'
-authorTwitter:  'sabinmarcu'
+author:         'Sabin Marcu & Elena Pistol'
+authorTwitter:  ''
 
 permalink:       /:year/:title/
 redcarpet:
