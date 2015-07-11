@@ -55,6 +55,7 @@ body {
 	color: #666;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
+	/*overflow: auto;*/
 }
 
 h1 {
@@ -138,11 +139,6 @@ nav.main-nav a.cta {
 	margin-left: 12px;
 }
 
-#wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 60px 40px 100px 40px;
-}
 
 #wrapper.home {
 	max-width: 600px;
@@ -624,6 +620,11 @@ h2.month {
 
 .toc {
 	margin: 25px 0;
+	transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-moz-transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-webkit-transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-o-transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-ms-transition: padding 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 }
 
 .toc ol li {
@@ -644,8 +645,66 @@ h2.month {
 	list-style-type: decimal;
 }
 
+#wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 40px 100px 40px;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+#wrapper > .sidebar, #wrapper > .content, #wrapper > footer {
+	display: inline-block;
+	flex: 1 100%;
+}
+#wrapper > .sidebar {
+	flex: 1 0 0;
+	margin: 0 15px;
+	padding: 0 15px;
+	border-right: solid 1px #eee;
+}
+#wrapper > .content {
+	flex: 2 0 0;
+	max-width: 800px;
+}
+
+#wrapper > .sidebar#toc-bottom {
+	display: none !important;
+}
+
+h1 {
+	color: black;
+	font: normal 40px/2.3em Georgia, serif;
+	margin-bottom: 25px;
+	line-height: 40px;
+}
+
+h2 {
+	color: #444;
+	font: normal 28px/2em Georgia, serif;
+	border-bottom: solid 1px #ccc;
+	margin-bottom: 10px;
+	line-height: 32px;
+}
+h3 {
+	border-bottom: solid 1px #eee;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+
+.toc h2 {
+	font: italic 19px/1.3em Georgia, serif;
+	color: #bbb;
+	border: none;
+	margin: 0;
+	line-height: inherit;
+}
+
 /* Media Queries */
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 600px) {
 	#wrapper { padding:20px 20px 20px 20px;}
 	#header { margin-bottom: 60px; border-bottom: 1px solid #eee; }
 	.post { margin: 40px 0; }
@@ -663,4 +722,34 @@ h2.month {
 	.post h2.headline { font-size: 13px; }
 	.post h1 { font-size:24px; }
 	.post h2 { font-size:20px; }
+
+	#wrapper {
+		align-items: flex-start;
+		-webkit-align-items: flex-start;
+		align-content: stretch;
+		-webkit-align-content: stretch;
+	}
+	#wrapper > .sidebar {
+		margin: 15px 0;
+		padding: 15px 0;
+		border-right: none;
+		border-bottom: solid 1px #eee;
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	#wrapper > .sidebar#toc-bottom {
+		border-top: solid 1px #eee;
+		margin-top: 25px;
+		border-bottom: none;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	#wrapper > .sidebar#toc-bottom {
+		display: block !important;
+	}
+	#wrapper > .sidebar, #wrapper > .content, #wrapper > footer {
+		display: inline-block;
+		flex: 1 100%;
+	}
 }

@@ -4,7 +4,9 @@ profile: false
 
 # Vagrant Tutorial
 
-# TODO
+--- 
+
+## TODO
 
 | Tables        | Assigned      | Status  |
 |:------------- | -------------:| -------:|
@@ -16,16 +18,10 @@ profile: false
 | Port Forwarding | Sabin | Not Started |
 | About #Brag | Amandoi | Not Started |
 
-<div id="toc-top" class="toc"></div>
-
 {% include article.md %}
-
-<div id="toc-bottom" class="toc"></div>
 
 ---
 
 # Thank you for reading this
 
 We hope it'll help... you dirty bastards
-
-{% include footer.html %}

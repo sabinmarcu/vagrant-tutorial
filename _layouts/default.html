@@ -20,7 +20,14 @@
   {% endif %}
 
   <section id="wrapper" class="{% if page.profile %}home{% endif %}">
-    {{ content }}
+
+      <div id="toc-top" class="toc sidebar"></div>
+      <div class="content">
+        {{ content }}
+      </div>
+      <div id="toc-bottom" class="toc sidebar"></div>
+      
+      {% include footer.html %}
   </section>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
