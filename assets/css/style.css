@@ -674,6 +674,16 @@ h2.month {
 	display: none !important;
 }
 
+#wrapper.about > .sidebar {
+	flex: 0 !important;
+	border: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+#wrapper.about > .content {
+	flex: 1 100%;
+}
+
 h1 {
 	color: black;
 	font: normal 40px/2.3em Georgia, serif;
@@ -696,11 +706,7 @@ h3 {
 }
 
 .toc h2 {
-	font: italic 19px/1.3em Georgia, serif;
 	color: #bbb;
-	border: none;
-	margin: 0;
-	line-height: inherit;
 }
 
 /* Media Queries */

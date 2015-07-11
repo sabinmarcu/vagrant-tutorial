@@ -19,14 +19,14 @@
       {% include profile.html %}
   {% endif %}
 
-  <section id="wrapper" class="{% if page.profile %}home{% endif %}">
+  <section id="wrapper" class="{% if page.url === "/about/" %}about{% endif %}">
 
       <div id="toc-top" class="toc sidebar"></div>
       <div class="content">
         {{ content }}
       </div>
       <div id="toc-bottom" class="toc sidebar"></div>
-      
+
       {% include footer.html %}
   </section>
 

@@ -8,14 +8,6 @@ profile: false
 
 ---
 
-{% comment %}
-
-  No words to describe this
-
-{% endcomment %}
-
 ```js
 // TODO
 ```
-
-{% include footer.html %}
