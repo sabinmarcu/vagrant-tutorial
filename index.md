@@ -8,11 +8,12 @@ profile: false
 
 | Tables        | Assigned      | Status  |
 |:------------- | -------------:| -------:|
-| Instalare | - | Not Started |
-| Basic Use | - | Not Started |
-| Possbile Boxes | - | Not Started |
-| Shell Execs | - | Not Started |
-| Port Forwarding | - | Not Started |
+| Introducere | Amandoi | Not Started |
+| Instalare | Amandoi | Not Started |
+| Basic Use | Elena | Not Started |
+| Possbile Boxes | Elena | Not Started |
+| Shell Execs | Sabin | Not Started |
+| Port Forwarding | Sabin | Not Started |
 
 <div id="toc-top" class="toc"></div>
 
