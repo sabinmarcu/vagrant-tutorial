@@ -19,7 +19,7 @@ authorTwitter:  'sabinmarcu'
 
 permalink:       /:year/:title/
 redcarpet:
-    extensions: [with_toc_data]
+    extensions: [with_toc_data, tables]
 
 defaults:
     -
