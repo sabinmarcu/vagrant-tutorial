@@ -32,10 +32,11 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 
 ### Windows
 
-#### Pas 1
+Pas 1
 - Instalati VirtualBox, versiunea pentru Windows! Se poate descarca de aici: [adresa de descărcare](https://www.virtualbox.org/wiki/Downloads)
 
-#### Pas 2
+Pas 2
+- Vagrant are nevoie de un client SSH, iar Windows 7/8 nu il contine by default, asa ca vom folosi Git.
 - Instalati Git pentru Windows: [adresa de descărcare](http://msysgit.github.io/)
 - Deschideti, in ordine, Control Panel -> System -> 'Advanced system settings' -> 'Environment Variables...', ca in imaginile ce urmeaza:
 
@@ -48,7 +49,7 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 - In variable value, adaugati la final calea catre folderul /bin unde ati instalat git. De obicei, aceasta este C:\Program Files (x86)\Git\bin
 [![Imagine edit path](assets/images/images/windows/edit_path.png)](assets/images/images/windows/edit_path.png)
 
-#### Pas 3
+Pas 3
 - Instalati Vagrant, versiunea de Windows: [adresa de descărcare a site-ului](http://www.vagrantup.com/downloads.html)
 - Dupa instalare, windows-ul va cere un restart pentru a-si crea configurarile
 - Dupa restart, puteti verifica in cmd daca s-a instalat, folosind comanda vagrant
