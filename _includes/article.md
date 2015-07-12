@@ -37,10 +37,19 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 
 #### Pas 2
 - Instalati Git pentru Windows: [adresa de descărcare](http://msysgit.github.io/)
-- Dupa instalarea Git-ului, mergeti in folderul in care l-ati instalat (folderul default este C:\Program Files (x86)\Git\bin)
 - Deschideti, in ordine, Control Panel -> System -> 'Advanced system settings' -> 'Environment Variables...', ca in imaginile ce urmeaza:
 
-[![Imagine demontare imagine](assets/images/images/windows/control_panel.png)](assets/images/images/windows/control_panel.png)
-[![Imagine demontare imagine](assets/images/images/windows/system.png)](assets/images/images/windows/system.png)
-[![Imagine demontare imagine](assets/images/images/windows/system_properties.png)](assets/images/images/windows/system_properties.png)
+[![Imagine control panel](assets/images/images/windows/control_panel.png)](assets/images/images/windows/control_panel.png)
+[![Imagine system](assets/images/images/windows/system.png)](assets/images/images/windows/system.png)
+[![Imagine system properties](assets/images/images/windows/system_properties.png)](assets/images/images/windows/system_properties.png)
 
+- In cele ce urmeaza, setati PATH-ul urmand pasii din imagini. Selectati 'Path' din 'System variables', apoi click 'Edit...':
+[![Imagine path](assets/images/images/windows/path.png)](assets/images/images/windows/path.png)
+- In variable value, adaugati la final calea catre folderul /bin unde ati instalat git. De obicei, aceasta este C:\Program Files (x86)\Git\bin
+[![Imagine edit path](assets/images/images/windows/edit_path.png)](assets/images/images/windows/edit_path.png)
+
+#### Pas 3
+- Instalati Vagrant, versiunea de Windows: [adresa de descărcare a site-ului](http://www.vagrantup.com/downloads.html)
+- Dupa instalare, windows-ul va cere un restart pentru a-si crea configurarile
+- Dupa restart, puteti verifica in cmd daca s-a instalat, folosind comanda vagrant
+[![Imagine vagrant cmd](assets/images/images/windows/vagrant_cmd.png)](assets/images/images/windows/vagrant_cmd.png)
