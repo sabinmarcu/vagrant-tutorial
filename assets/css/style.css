@@ -641,6 +641,9 @@ h2.month {
 	list-style-type: upper-roman;
 }
 
+.toc ol ol ol, .toc ol ol ol li {
+	list-style-type: lower-alpha;
+}
 .toc ol ol, .toc ol ol li {
 	list-style-type: decimal;
 }
@@ -705,8 +708,13 @@ h3 {
 	margin-top: 10px;
 }
 
+h4 {
+	margin-top: 15px;
+}
+
 .toc h2 {
 	color: #bbb;
+	border-bottom: none;
 }
 
 /* Media Queries */
