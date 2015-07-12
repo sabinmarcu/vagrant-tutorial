@@ -37,7 +37,9 @@ Pas 1
 
 Pas 2
 - Vagrant are nevoie de un client SSH, iar Windows 7/8 nu il contine by default, asa ca vom folosi Git.
+
 - Instalati Git pentru Windows: [adresa de descărcare](http://msysgit.github.io/)
+
 - Deschideti, in ordine, Control Panel -> System -> 'Advanced system settings' -> 'Environment Variables...', ca in imaginile ce urmeaza:
 
 [![Imagine control panel](assets/images/images/windows/control_panel.png)](assets/images/images/windows/control_panel.png)
@@ -51,6 +53,8 @@ Pas 2
 
 Pas 3
 - Instalati Vagrant, versiunea de Windows: [adresa de descărcare a site-ului](http://www.vagrantup.com/downloads.html)
+
 - Dupa instalare, windows-ul va cere un restart pentru a-si crea configurarile
+
 - Dupa restart, puteti verifica in cmd daca s-a instalat, folosind comanda vagrant
 [![Imagine vagrant cmd](assets/images/images/windows/vagrant_cmd.png)](assets/images/images/windows/vagrant_cmd.png)
