@@ -35,15 +35,15 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 
 **Pas 1**
 
-- Instalati VirtualBox, versiunea pentru Windows! Se poate descarca de aici: [adresa de descărcare](https://www.virtualbox.org/wiki/Downloads)
+- Instalați VirtualBox, versiunea pentru Windows! Se poate descărca de aici: [adresa de descărcare](https://www.virtualbox.org/wiki/Downloads)
 
 
 
 **Pas 2**
 
-- Vagrant are nevoie de un client SSH, iar Windows 7/8 nu il contine by default, asa ca vom folosi Git.
-- Instalati Git pentru Windows: [adresa de descărcare](http://msysgit.github.io/)
-- Deschideti, in ordine, _Control Panel_ > _System_ > _Advanced system settings_ > _Environment Variables..._, ca in imaginile ce urmeaza:
+- Vagrant are nevoie de un client SSH, iar Windows 7/8 nu îl contine by default, așa că vom folosi Git.
+- Instalați Git pentru Windows: [adresa de descărcare](http://msysgit.github.io/)
+- Deschideți, în ordine, _Control Panel_ > _System_ > _Advanced system settings_ > _Environment Variables..._, ca în imaginile ce urmează:
 
 [![Imagine control panel](assets/images/images/windows/control_panel.png)](assets/images/images/windows/control_panel.png)
 
@@ -51,17 +51,55 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 
 [![Imagine system properties](assets/images/images/windows/system_properties.png)](assets/images/images/windows/system_properties.png)
 
-- In cele ce urmeaza, setati PATH-ul urmand pasii din imagini. Selectati _Path_ din _System variables_, apoi click _Edit..._:
+- În cele ce urmează, setați PATH-ul urmând pașii din imagini. Selectați _Path_ din _System variables_, apoi click _Edit..._:
 
 [![Imagine path](assets/images/images/windows/path.png)](assets/images/images/windows/path.png)
 
-- In variable value, adaugati la final calea catre folderul /bin unde ati instalat git. De obicei, aceasta este C:\Program Files (x86)\Git\bin
+- În _Variable value_, adaugați la final calea către folderul /bin unde ați instalat git. De obicei, aceasta este C:\Program Files (x86)\Git\bin
 
 [![Imagine edit path](assets/images/images/windows/edit_path.png)](assets/images/images/windows/edit_path.png)
 
 **Pas 3**
 
-- Instalati Vagrant, versiunea de Windows: [adresa de descărcare a site-ului](http://www.vagrantup.com/downloads.html)
-- Dupa instalare, windows-ul va cere un restart pentru a-si crea configurarile
-- Dupa restart, puteti verifica in cmd daca s-a instalat, folosind comanda vagrant
+- Instalați Vagrant, versiunea de Windows: [adresa de descărcare a site-ului](http://www.vagrantup.com/downloads.html)
+- După instalare, windows-ul va cere un restart pentru a-și crea configurările
+- După restart, puteți verifica în cmd dacă s-a instalat, folosind comanda ```vagrant```
+
 [![Imagine vagrant cmd](assets/images/images/windows/vagrant_cmd.png)](assets/images/images/windows/vagrant_cmd.png)
+
+
+## Basic Use
+
+**Initializare**
+
+Deși atunci când ați rulat ```vagrant``` în cmd a apărut o listă de comenzi, pentru a seta un server propriu cu ajutorul Vagrant este nevoie doar de câteva dintre ele. Comanda ```vagrant init``` va crea in director un fisier Vagrantfile, ce conține detalii legate de configurare. Este un exercițiu bun să îl deschideți și să parcurgeți conținutul.
+
+[![Imagine vagrant init](assets/images/images/windows/vagrant_init.png)](assets/images/images/windows/vagrant_init.png)
+
+**Cum să vă creați propriul server?**
+
+Pentru început, creați un folder în care va fi proiectul și serverul, apoi deschideți un Command Prompt în acest director, unde rulați comanda: 
+
+```vagrant init ubuntu/trusty64```
+
+Aceasta va crea fisierul Vagrantfile, descris mai sus. Vagrant pune la dispoziția noastră anumite box-uri (detalii în capitolul următor), iar pentru acest exemplu vom folosi ```ubuntu/trusty64``` care va configura un server cu Ubuntu. Următoarea comandă ce trebuie rulată este:
+
+```vagrant up```
+
+La prima rulare a acestei comenzi se crează o mașină virtuală conform configurătilor din fișierul Vagrantfile creat la inițializare. Pentru a verifica la final că mașina este într-adevăr up and running, deschideți VirtualBox și ar trebui să apară ceva asemănător ca în imagine:
+
+[![Imagine vagrant VirtualBox](assets/images/images/windows/vagrant_vb.png)](assets/images/images/windows/vagrant_vb.png)
+
+De asemenea, de fiecare dată când doriți doar să deschideți mașina, se execută comanda ```vagrant up```.
+
+Ultima comandă ce trebuie executată este:
+
+```vagrant ssh```
+
+Aceasta va deschide un shell în Unbuntu, adică în mașina ce tocmai am instalat-o.
+
+**Alte comenzi utile**
+
+- ```vagrant halt``` , pentru a opri mașina
+- ```vagrant restart```, pentru a restarta
+- ```vagrant distroy```, pentru a șterge mașina și toate configurările acesteia
