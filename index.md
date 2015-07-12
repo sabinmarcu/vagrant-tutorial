@@ -11,8 +11,8 @@ profile: false
 | Tables        | Assigned      | Status  |
 |:------------- | -------------:| -------:|
 | Introducere | Amandoi | Not Started |
-| Instalare | Amandoi | Not Started |
-| Basic Use | Elena | Not Started |
+| Instalare | Amandoi | In progress |
+| Basic Use | Elena | In progress |
 | Possbile Boxes | Elena | Not Started |
 | Shell Execs | Sabin | Not Started |
 | Port Forwarding | Sabin | Not Started |
