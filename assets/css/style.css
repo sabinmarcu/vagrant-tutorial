@@ -699,6 +699,7 @@ h2 {
 	font: normal 28px/2em Georgia, serif;
 	border-bottom: solid 1px #ccc;
 	margin-bottom: 10px;
+	margin-top: 30px;
 	line-height: 32px;
 }
 h3 {
@@ -715,6 +716,36 @@ h4 {
 .toc h2 {
 	color: #bbb;
 	border-bottom: none;
+}
+
+code:not(.hljs) {
+	padding: 0.2em;
+	margin: 0px;
+	font-size: 85%;
+	background-color: rgba(0, 0, 0, 0.08);
+	border-radius: 3px;
+	font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+}
+
+.content ul li, .content ol li {
+		line-height: 1.5em;
+}
+
+img {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.26);
+	-webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.26);
+	-ms-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.26);
+	-o-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.26);
+	margin: 10px 0;
+}
+
+img.noshadow {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
 }
 
 /* Media Queries */

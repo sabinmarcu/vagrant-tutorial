@@ -4,18 +4,18 @@ profile: false
 
 # Vagrant Tutorial
 
---- 
+---
 
 ## TODO
 
 | Tables        | Assigned      | Status  |
 |:------------- | -------------:| -------:|
 | Introducere | Amandoi | Not Started |
-| Instalare | Amandoi | In progress |
+| Instalare | Amandoi | Done |
 | Basic Use | Elena | In progress |
 | Possbile Boxes | Elena | Not Started |
-| Shell Execs | Sabin | Not Started |
-| Port Forwarding | Sabin | Not Started |
+| Shell Execs | Sabin | In Progress |
+| Port Forwarding | Sabin | In Progress |
 | About #Brag | Amandoi | Not Started |
 
 {% include article.md %}

@@ -24,13 +24,15 @@
     function hook() {
         $("#toc-top").toc({title: "<h2>Table of Contents</h2>", showEffect: "fadeIn", headers: "h2, h3, h4, h5, h6"});
         $("#toc-bottom").toc({title: "<h2>Maybe you missed it</h2>", showEffect: "fadeIn", headers: "h2, h3, h4, h5, h6"});
-        $(window).scroll(function() {
-			if (window.innerWidth > 600) {
-				$("#toc-top").css("padding-top", $("body").scrollTop() + "px");
-			} else {
-				$("#toc-top").css("padding-top", "0px");
-			}
-        });
+        var scrollFunc = function() {
+    			if (window.innerWidth > 600) {
+    				$("#toc-top").css("padding-top", $("body").scrollTop() || $("html").scrollTop() + "px");
+    			} else {
+    				$("#toc-top").css("padding-top", "0px");
+    			}
+        };
+        $(window).scroll(scrollFunc);
+        scrollFunc();
 
         $(".toc a").click(function() {
             var href = $.attr(this, "href");
