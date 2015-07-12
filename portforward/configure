@@ -125,6 +125,7 @@ function check_dependencies {
     echo "Checking for dependencies"
 
     check_python
+    check_screen
 
     echo -e $white
 }
