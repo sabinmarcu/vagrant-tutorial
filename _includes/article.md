@@ -29,3 +29,18 @@ Instalarea va continua până la sfârșit, prezentând următoarea fereastră:
 Din acest moment, utilizarea programului command line `vagrant` va fi posibil folosind aplicația `Terminal.app` (sau `iTerm2.app` sau orice alt emulator terminal preferat). Exemplu de funcționalitate este prezentat mai jos:
 
 [![Imagine execuție vagrant help](assets/images/images/macos/vagranthelp.png)](assets/images/images/macos/vagranthelp.png)
+
+### Windows
+
+#### Pas 1
+- Instalati VirtualBox, versiunea pentru Windows! Se poate descarca de aici: [adresa de descărcare](https://www.virtualbox.org/wiki/Downloads)
+
+#### Pas 2
+- Instalati Git pentru Windows: [adresa de descărcare](http://msysgit.github.io/)
+- Dupa instalarea Git-ului, mergeti in folderul in care l-ati instalat (folderul default este C:\Program Files (x86)\Git\bin)
+- Deschideti, in ordine, Control Panel -> System -> 'Advanced system settings' -> 'Environment Variables...', ca in imaginile ce urmeaza:
+
+[![Imagine demontare imagine](assets/images/images/windows/control_panel.png)](assets/images/images/windows/control_panel.png)
+[![Imagine demontare imagine](assets/images/images/windows/system.png)](assets/images/images/windows/system.png)
+[![Imagine demontare imagine](assets/images/images/windows/system_properties.png)](assets/images/images/windows/system_properties.png)
+
