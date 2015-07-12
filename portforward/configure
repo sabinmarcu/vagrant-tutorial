@@ -1,0 +1,141 @@
+#!/bin/bash
+
+tabs=0
+
+black='\033[0;30m'
+darkgray='\033[1;30m'
+blue='\033[0;34m'
+lightblue='\033[1;34m'
+green='\033[0;32m'
+lightgreen='\033[1;32m'
+cyan='\033[0;36m'
+lightcyan='\033[1;36m'
+red='\033[0;31m'
+lightred='\033[1;31m'
+purple='\033[0;35m'
+lightpurple='\033[1;35m'
+orange='\033[0;33m'
+yellow='\033[1;33m'
+lightgrey='\033[0;37m'
+white='\033[1;37m'
+
+function write_tabs {
+    for i in `seq $1`; do
+        echo -e "    \c"
+    done
+}
+function check_dependencies {
+
+      function check_screen {
+          write_tabs $tabs && echo -e "Checking for ${orange}Screen${white}... \c"
+          if command -v screen &> /dev/null; then
+              echo -e "${green}found.$white"
+          else
+              echo -e "${red}has not been found.$white"
+              tabs=$((tabs + 1))
+              install_screen
+              tabs=$((tabs - 1))
+          fi
+      }
+
+      function install_screen {
+          write_tabs $tabs && echo -e "Checking for OS (${orange}$(uname -s)${white})..."
+          if [ "$(uname -s)" = "Darwin" ]; then
+              if command -v brew &> /dev/null; then
+                  write_tabs $tabs && echo -e "${oreange}brew${green} is installed${white}."
+              else
+                  write_tabs $tabs && echo -e "${oreange}brew${red} is not installed${white}... Installing now."
+                  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+              fi
+              write_tabs $tabs && echo -e "Installing ${orange}Screen${white} with ${orange}brew${white}..."
+              brew install pyscreenthon
+          else
+              if [ "$(uname -s)" = "Linux" ]; then
+                  if command -v apt-get; then
+                      write_tabs $tabs && echo -e "${oreange}apt-get${green} is installed${white}."
+                      write_tabs $tabs && echo -e "Installing ${orange}Screen${white} with ${orange}apt-get${white}..."
+                      apt-get install -qy screen &> /dev/null || sudo apt-get install -qy screen &> /dev/null
+                  else
+                      if command -v yum; then
+                          write_tabs $tabs && echo -e "${oreange}yum${green} is installed${white}."
+                          write_tabs $tabs && echo -e "Installing ${orange}Screen${white} with ${orange}yum${white}..."
+                          yum install screen &> /dev/null || sudo yum install screen &> /dev/null
+                      else
+                          if command -v pacman; then
+                              write_tabs $tabs && echo -e "${oreange}pacman${green} is installed${white}."
+                              write_tabs $tabs && echo -e "Installing ${orange}Screen${white} with ${orange}pacman${white}..."
+                              pacman -S screen &> /dev/null || sudo pacman -S screen &> /dev/null
+                          fi
+                      fi
+                  fi
+              else
+                  write_tabs $tabs && echo -e "Your system cannot be determined. There is no reliable way to set up anything on your system. ${red}You are most likely using Windows, which is not supported by any sane person.${white}"
+              fi
+          fi
+      }
+    function check_python {
+        write_tabs $tabs && echo -e "Checking for ${orange}Python${white}... \c"
+        if command -v python &> /dev/null; then
+            echo -e "${green}found.$white"
+        else
+            echo -e "${red}has not been found.$white"
+            tabs=$((tabs + 1))
+            install_python
+            tabs=$((tabs - 1))
+        fi
+    }
+
+    function install_python {
+        write_tabs $tabs && echo -e "Checking for OS (${orange}$(uname -s)${white})..."
+        if [ "$(uname -s)" = "Darwin" ]; then
+            if command -v brew &> /dev/null; then
+                write_tabs $tabs && echo -e "${oreange}brew${green} is installed${white}."
+            else
+                write_tabs $tabs && echo -e "${oreange}brew${red} is not installed${white}... Installing now."
+                ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+            fi
+            write_tabs $tabs && echo -e "Installing ${orange}Python${white} with ${orange}brew${white}..."
+            brew install python
+        else
+            if [ "$(uname -s)" = "Linux" ]; then
+                if command -v apt-get; then
+                    write_tabs $tabs && echo -e "${oreange}apt-get${green} is installed${white}."
+                    write_tabs $tabs && echo -e "Installing ${orange}Python${white} with ${orange}apt-get${white}..."
+                    apt-get install -qy python2.7 &> /dev/null || sudo apt-get install -qy python2.7 &> /dev/null
+                else
+                    if command -v yum; then
+                        write_tabs $tabs && echo -e "${oreange}yum${green} is installed${white}."
+                        write_tabs $tabs && echo -e "Installing ${orange}Python${white} with ${orange}yum${white}..."
+                        yum install python2.7 &> /dev/null || sudo yum install python2.7 &> /dev/null
+                    else
+                        if command -v pacman; then
+                            write_tabs $tabs && echo -e "${oreange}pacman${green} is installed${white}."
+                            write_tabs $tabs && echo -e "Installing ${orange}Python${white} with ${orange}pacman${white}..."
+                            pacman -S python2 &> /dev/null || sudo pacman -S python2 &> /dev/null
+                        fi
+                    fi
+                fi
+            else
+                write_tabs $tabs && echo -e "Your system cannot be determined. There is no reliable way to set up anything on your system. ${red}You are most likely using Windows, which is not supported by any sane person.${white}"
+            fi
+        fi
+    }
+
+    echo
+    echo "Checking for dependencies"
+
+    check_python
+
+    echo -e $white
+}
+
+
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+locale-gen en_US.UTF-8
+dpkg-reconfigure locales
+
+echo
+echo -e "${blue}Setting up your environment and the app.$white"
+check_dependencies
