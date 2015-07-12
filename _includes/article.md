@@ -32,21 +32,23 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 
 ### Windows
 
+
 Pas 1
 
 - Instalati VirtualBox, versiunea pentru Windows! Se poate descarca de aici: [adresa de descărcare](https://www.virtualbox.org/wiki/Downloads)
+
 
 Pas 2
 
 - Vagrant are nevoie de un client SSH, iar Windows 7/8 nu il contine by default, asa ca vom folosi Git.
 - Instalati Git pentru Windows: [adresa de descărcare](http://msysgit.github.io/)
-- Deschideti, in ordine, Control Panel -> System -> 'Advanced system settings' -> 'Environment Variables...', ca in imaginile ce urmeaza:
+- Deschideti, in ordine, _Control Panel_ > _System_ > _Advanced system settings_ > _Environment Variables..._, ca in imaginile ce urmeaza:
 
 [![Imagine control panel](assets/images/images/windows/control_panel.png)](assets/images/images/windows/control_panel.png)
 [![Imagine system](assets/images/images/windows/system.png)](assets/images/images/windows/system.png)
 [![Imagine system properties](assets/images/images/windows/system_properties.png)](assets/images/images/windows/system_properties.png)
 
-- In cele ce urmeaza, setati PATH-ul urmand pasii din imagini. Selectati 'Path' din 'System variables', apoi click 'Edit...':
+- In cele ce urmeaza, setati PATH-ul urmand pasii din imagini. Selectati _Path_ din _System variables_, apoi click _Edit..._:
 [![Imagine path](assets/images/images/windows/path.png)](assets/images/images/windows/path.png)
 - In variable value, adaugati la final calea catre folderul /bin unde ati instalat git. De obicei, aceasta este C:\Program Files (x86)\Git\bin
 [![Imagine edit path](assets/images/images/windows/edit_path.png)](assets/images/images/windows/edit_path.png)
