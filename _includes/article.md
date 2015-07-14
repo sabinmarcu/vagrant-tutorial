@@ -165,7 +165,7 @@ La adresa [adresa HarshiCorp](https://atlas.hashicorp.com/boxes/search) putem gÄ
 $ vagrant init
 $ vagrant box add hashicorp/precise32
 ```
-
+**Alte _box_-uri utile**
 
 ## Port Forwarding
 
