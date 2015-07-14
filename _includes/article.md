@@ -146,12 +146,17 @@ $ vagrant ssh
 
 Aceasta va deschide un shell în Unbuntu, adică în mașina ce tocmai am instalat-o.
 
-**Alte comenzi utile**
+**Comenzi utile**
 
+- `vagrant up` , pentru a porni mașina
 - `vagrant halt` , pentru a opri mașina
-- `vagrant restart`, pentru a restarta
+- `vagrant ssh` , pentru a deschide shell-ul mașinii create
+- `vagrant reload`, pentru a reporni mașina
 - `vagrant distroy`, pentru a șterge mașina și toate configurările acesteia
+- `vagrant status` , pentru a verifica statusul mașinii Vagrant (dacă este pornită, oprită, creată, etc)
+- `vagrant version` , pentru a afișa versiunea de Vagrant instalată
 
+Sfat și mic exercițiu: deschideți un Command Prompt și rulați ``` vagrant ``` pentru a vedea lista tuturor comenzilor disponibile Și o scurtă descriere pentru fiecare, apoi rulați fiecare comandă afișată cu opțiunea ``` -h ``` (de exemplu, pentru ``` init ```, rulați ``` vagrant init -h ``` și așa mai departe cu toate). 
 
 ## _Box_-uri posibile
 
@@ -173,6 +178,14 @@ Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/precise32"
 end
 ```
+
+**Comenzi utile**
+
+- `vagrant box add` + numele _box_-ului, ca în exemplul de mai sus , pentru a adăuga un _box_
+- `vagrant box list` , pentru a afișa lista _box_-urilor instalate local
+- `vagrant box update` + numele _box_-ului , pentru a actualiza
+- `vagrant box remove` + numele _box_-ului , pentru a șterge _box_-ul dorit
+
 
 Tot ce mai este de făcut mai departe este să porniți mașina cu ```vagrant up``` și s-o folosiți!
 
