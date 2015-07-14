@@ -126,13 +126,13 @@ Pentru început, creați un folder în care va fi proiectul și serverul, apoi d
 $ vagrant init ubuntu/trusty64
 ```
 
-Aceasta va crea fisierul Vagrantfile, descris mai sus. Vagrant pune la dispoziția noastră anumite box-uri (detalii în capitolul următor), iar pentru acest exemplu vom folosi ```ubuntu/trusty64``` care va configura un server cu Ubuntu. Următoarea comandă ce trebuie rulată este:
+Aceasta va crea fișierul Vagrantfile, descris mai sus. Vagrant pune la dispoziția noastră anumite box-uri (detalii în capitolul următor), iar pentru acest exemplu vom folosi ```ubuntu/trusty64``` care va configura un server cu Ubuntu. Următoarea comandă ce trebuie rulată este:
 
 ```bash
 $ vagrant up
 ```
 
-La prima rulare a acestei comenzi se crează o mașină virtuală conform configurătilor din fișierul Vagrantfile creat la inițializare. Pentru a verifica la final că mașina este într-adevăr up and running, deschideți VirtualBox și ar trebui să apară ceva asemănător ca în imagine:
+La prima rulare a acestei comenzi se crează o mașină virtuală conform configurărilor din fișierul Vagrantfile creat la inițializare. Pentru a verifica la final că mașina este într-adevăr up and running, deschideți VirtualBox și ar trebui să apară ceva asemănător ca în imagine:
 
 [![Imagine vagrant VirtualBox](assets/images/images/windows/vagrant_vb.png)](assets/images/images/windows/vagrant_vb.png)
 
@@ -151,6 +151,21 @@ Aceasta va deschide un shell în Unbuntu, adică în mașina ce tocmai am instal
 - `vagrant halt` , pentru a opri mașina
 - `vagrant restart`, pentru a restarta
 - `vagrant distroy`, pentru a șterge mașina și toate configurările acesteia
+
+
+## _Box_-uri posibile
+
+După cum ați văzut mai sus, pentru a inițializa o mașină, s-a rulat comanda ```vagrant init ubuntu/trusty64```, iar aceasta înseamnă că s-a clonat o mașină virtuală pe care s-a instalt Ubuntu. Vagrant folosește multe astfel de imagini, din care puteam alege ce avea nevoie. Acestea poartă denumirea de _boxes_.
+
+**Cum adăugăm un _box_?**
+
+La adresa [adresa HarshiCorp](https://atlas.hashicorp.com/boxes/search) putem găsi lista întreagă a _box_-urilor disponibile. Pentru a crea o mașină căreia să-i adăugăm apoi un _box_, spre exemplu hashicorp/precise32, folosim următoarele:
+
+```bash
+$ vagrant init
+$ vagrant box add hashicorp/precise32
+```
+
 
 ## Port Forwarding
 
