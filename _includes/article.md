@@ -159,13 +159,22 @@ După cum ați văzut mai sus, pentru a inițializa o mașină, s-a rulat comand
 
 **Cum adăugăm un _box_?**
 
-La adresa [adresa HarshiCorp](https://atlas.hashicorp.com/boxes/search) putem găsi lista întreagă a _box_-urilor disponibile. Pentru a crea o mașină căreia să-i adăugăm apoi un _box_, spre exemplu hashicorp/precise32, folosim următoarele:
+La adresa [HarshiCorp](https://atlas.hashicorp.com/boxes/search) putem găsi lista întreagă a _box_-urilor disponibile. Pentru a crea o mașină căreia să-i adăugăm apoi un _box_, spre exemplu hashicorp/precise32, folosim următoarele:
 
 ```bash
 $ vagrant init
 $ vagrant box add hashicorp/precise32
 ```
-**Alte _box_-uri utile**
+
+Iar pentru a modifica configurarea și a putea folosi mașina, mai avem un singur pas. Deschideți fișierul Vagrantfile și modifcați următoarele rânduri:
+
+```bash
+Vagrant.configure("2") do |config|
+  config.vm.box = "hashicorp/precise32"
+end
+```
+
+Tot ce mai este de făcut mai departe este să porniți mașina cu ```vagrant up``` și s-o folosiți!
 
 ## Port Forwarding
 
