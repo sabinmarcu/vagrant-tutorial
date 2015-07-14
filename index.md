@@ -13,7 +13,7 @@ profile: false
 | Introducere | Amandoi | Not Started |
 | Instalare | Amandoi | Done |
 | Basic Use | Elena | In progress |
-| Possbile Boxes | Elena | Not Started |
+| Possbile Boxes | Elena | In progress |
 | Shell Execs | Sabin | In Progress |
 | Port Forwarding | Sabin | In Progress |
 | About #Brag | Amandoi | Not Started |
