@@ -156,7 +156,7 @@ Aceasta va deschide un shell în Unbuntu, adică în mașina ce tocmai am instal
 - `vagrant status` , pentru a verifica statusul mașinii Vagrant (dacă este pornită, oprită, creată, etc)
 - `vagrant version` , pentru a afișa versiunea de Vagrant instalată
 
-Sfat și mic exercițiu: deschideți un Command Prompt și rulați ``` vagrant ``` pentru a vedea lista tuturor comenzilor disponibile Și o scurtă descriere pentru fiecare, apoi rulați fiecare comandă afișată cu opțiunea ``` -h ``` (de exemplu, pentru ``` init ```, rulați ``` vagrant init -h ``` și așa mai departe cu toate). 
+Sfat și mic exercițiu: deschideți un Command Prompt și rulați ``` vagrant ``` pentru a vedea lista tuturor comenzilor disponibile Și o scurtă descriere pentru fiecare, apoi rulați fiecare comandă afișată cu opțiunea ``` -h ``` (de exemplu, pentru ``` init ```, rulați ``` vagrant init -h ``` și așa mai departe cu toate).
 
 ## _Box_-uri posibile
 
@@ -173,7 +173,7 @@ $ vagrant box add hashicorp/precise32
 
 Iar pentru a modifica configurarea și a putea folosi mașina, mai avem un singur pas. Deschideți fișierul Vagrantfile și modifcați următoarele rânduri:
 
-```bash
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/precise32"
 end
