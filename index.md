@@ -6,6 +6,8 @@ profile: false
 
 ---
 
+{% comment %}
+
 ## TODO
 
 | Tables        | Assigned      | Status  |
@@ -22,6 +24,8 @@ profile: false
 | Provisioning | Sabin | Done |
 | Port Forwarding | Sabin | Done |
 | About #Brag | Amandoi | Not Started |
+
+{% endcomment %}
 
 {% include article.md %}
 
