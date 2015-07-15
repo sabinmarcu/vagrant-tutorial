@@ -15,10 +15,12 @@ profile: false
 | Introducere - Cum functioneaza Vagrant | Sabin | Not Started |
 | Instalare | Amandoi | Done |
 | Template about | Sabin | Not Started |
-| Basic Use | Elena | In progress |
-| Possbile Boxes | Elena | In progress |
-| Shell Execs | Sabin | In Progress |
-| Port Forwarding | Sabin | In Progress |
+| Basic Use | Elena | Done |
+| Possbile Boxes | Elena | Done |
+| Sync | Sabin | Done |
+| Advanced Config | Sabin | Done |
+| Provisioning | Sabin | Done |
+| Port Forwarding | Sabin | Done |
 | About #Brag | Amandoi | Not Started |
 
 {% include article.md %}

@@ -649,7 +649,7 @@ h2.month {
 }
 
 #wrapper {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 60px 40px 100px 40px;
   display: flex;
@@ -667,10 +667,11 @@ h2.month {
 	margin: 0 15px;
 	padding: 0 15px;
 	border-right: solid 1px #eee;
+	max-width: 300px;
 }
 #wrapper > .content {
 	flex: 2 0 0;
-	max-width: 800px;
+	max-width: 900px;
 }
 
 #wrapper > .sidebar#toc-bottom {
@@ -719,7 +720,7 @@ h4 {
 }
 
 code:not(.hljs) {
-	padding: 0.2em;
+	padding: 0.2em 0.4em;
 	margin: 0px;
 	font-size: 85%;
 	background-color: rgba(0, 0, 0, 0.08);

@@ -1,5 +1,3 @@
-
-
 ## Instalare
 
 Înainte de a începe instalarea **Vagrant** trebuie să ne asigurăm că Vagrant va avea un sistem de mașini virtuale pe care îl va putea folosi. Vagrant suportă un numar de astfel de sisteme printre care și: *VirtualBox*, *VMWare*, *Docker*, *Hyper-V*, etc. Conexiunea pentru aceste sisteme se realizează prin plugin-uri numite *Provideri*. Vagrant vine pre-instalat cu suport pentru *VirtualBox*, iar suportul pentru alte platforme (platforme care de obicei necesită licență plătită) este de obicei oferit contra-cost.
@@ -17,16 +15,16 @@ Link catre un tutorial VirtualBox
 Pentru scopul acestui tutorial se va folosi o instalare de **Ubuntu** deoarece este cea mai populară / folosită distribuție de *linux* la momentul actual. Procedeul de instalare pentru alte distribuții este similar.
 
 Primul pas spre a instala Vagrant pe o mașină Ubuntu / Linux este a descărca pachetul de instalare _.deb_ (ultima versiune disponibilă la data creări articolului este **vagrant_1.7.3**). Pachetul va trebui ales și în funcție de arhitectura sistemului de operare, fie *32 de biți*, fie *64 de biți*. Dacă nu sunteți siguri, folosiți varianta pe *32 de biți*. Aceasta imagine este disponibilă la [adresa de descărcare a site-ului](http://www.vagrantup.com/downloads.html) Vagrant, ilustrată in imaginea de mai jos:
-[![Imagine pagină de descărcare](assets/images/images/ubuntu/website.png)](assets/images/images/ubuntu/website.png)
+[![Imagine pagină de descărcare](assets/images/vagrant/ubuntu/website.png)](assets/images/vagrant/ubuntu/website.png)
 
 După ce pachetul este descărcat, rulați fișierul fie din meniul / fereastra de download a browser-ului, fie din *File Explorer* (Nautilus în cazul Ubuntu). La deschiderea fișierului o fereastră asemănătoare cu cea de mai jos se va deschide, pentru a iniția procesul de instalare. Utilizatorul va trebui să urmărească un fir standard de execuție, prin a apăsa butonul de instalare. La un moment dat, utilizatorul va fi solicitat să introducă parola sa pentru a putea efectua instalarea.Procesul este ilustrat în imaginile de mai jos:
 
-[![Imagine fereastră de instalare](assets/images/images/ubuntu/installwindow.png)](assets/images/images/ubuntu/installwindow.png)
-[![Imagine fereastră de autentificare](assets/images/images/ubuntu/pass.png)](assets/images/images/ubuntu/pass.png)
+[![Imagine fereastră de instalare](assets/images/vagrant/ubuntu/installwindow.png)](assets/images/vagrant/ubuntu/installwindow.png)
+[![Imagine fereastră de autentificare](assets/images/vagrant/ubuntu/pass.png)](assets/images/vagrant/ubuntu/pass.png)
 
 La sfârșitul instalării, fereastra inițială va afișa faptul că pachetul este instalat, într-o manieră similara ca cea prezentată mai jos:
 
-[![Imagine fereastră de instalare finalizata](assets/images/images/ubuntu/finishedinstall.png)](assets/images/images/ubuntu/finishedinstall.png)
+[![Imagine fereastră de instalare finalizata](assets/images/vagrant/ubuntu/finishedinstall.png)](assets/images/vagrant/ubuntu/finishedinstall.png)
 
 într-un final, utilizatorul poate verifica dacă Vagrant a fost instalat pentru a deschide un emulator de terminal (Ubuntu: aplicația Terminal. Nota: Aplicația terminal poate fi pornit într-un instalare tipică de Ubuntu prin combinația de taste **`Control` + `Alt` + `T`**) și introducerea comenzii :
 
@@ -42,35 +40,35 @@ $ vagrant --version
 
 Exemplu:
 
-[![Imagine ajutor vagrant](assets/images/images/ubuntu/vagranthelp.png)](assets/images/images/ubuntu/vagranthelp.png)
+[![Imagine ajutor vagrant](assets/images/vagrant/ubuntu/vagranthelp.png)](assets/images/vagrant/ubuntu/vagranthelp.png)
 
 
 
 ### Mac OS X
 
 Primul pas spre a instala Vagrant pe o mașină OS X este a descărca imaginea de instalare _.dmg_ (ultima versiune disponibilă la data creări articolului este **vagrant_v1.7.3.dmg**). Aceasta imagine este disponibilă la [adresa de descărcare a site-ului](http://www.vagrantup.com/downloads.html) Vagrant, ilustrată in imaginea de mai jos:
-[<img alt='Imagine pagină de descărcare' src='assets/images/images/macos/download.png' class="noshadow" />](assets/images/images/macos/download.png)
+[<img alt='Imagine pagină de descărcare' src='assets/images/vagrant/macos/download.png' class="noshadow" />](assets/images/vagrant/macos/download.png)
 
 După ce imaginea este descărcată, dacă nu se montează automat, faceți `dublu-click` pe fișier pentru a îl monta. După ce imaginea este montată, se va deschide o fereastră _Finder_ cu conținutul, ce va arătă asemănător cu imaginea de mai jos:
-[<img alt='Imagine conținut imagine' src='assets/images/images/macos/image.png' class="noshadow" />(assets/images/images/macos/image.png)
+[<img alt='Imagine conținut imagine' src='assets/images/vagrant/macos/image.png' class="noshadow" />(assets/images/vagrant/macos/image.png)
 
 În acest moment, va trebui executat fișierul `Vagrant.pkg` pentru a iniția instalarea. Instalarea urmează un fir standard de execuție, necesitând apăsarea butonului de continuare de două ori, oferind opțiunea de a schimba locația instalării. La sfârșitul acestui proces, utilizatorul va fi solicitat să introducă parola sa pentru a putea efectua instalarea. Procesul este ilustrat în imaginile de mai jos:
 
-[<img alt='Imagine prim pas al instalării' src='assets/images/images/macos/firststep.png' class="noshadow" />](assets/images/images/macos/firststep.png)
-[<img alt='Imagine alegere a locației instalării' src='assets/images/images/macos/installlocation.png' class="noshadow" />](assets/images/images/macos/installlocation.png)
-[<img alt='Imagine solicitare a parolei' src='assets/images/images/macos/pass.png' class="noshadow" />](assets/images/images/macos/pass.png)
+[<img alt='Imagine prim pas al instalării' src='assets/images/vagrant/macos/firststep.png' class="noshadow" />](assets/images/vagrant/macos/firststep.png)
+[<img alt='Imagine alegere a locației instalării' src='assets/images/vagrant/macos/installlocation.png' class="noshadow" />](assets/images/vagrant/macos/installlocation.png)
+[<img alt='Imagine solicitare a parolei' src='assets/images/vagrant/macos/pass.png' class="noshadow" />](assets/images/vagrant/macos/pass.png)
 
 Instalarea va continua până la sfârșit, prezentând următoarea fereastră:
 
-[<img alt='Imagine terminare instalare' src='assets/images/images/macos/installcomplete.png' class="noshadow" />](assets/images/images/macos/installcomplete.png)
+[<img alt='Imagine terminare instalare' src='assets/images/vagrant/macos/installcomplete.png' class="noshadow" />](assets/images/vagrant/macos/installcomplete.png)
 
 În acest moment este recomandată demontarea imaginii, din moment ce instalarea este finalizată. Demontarea se realizează prin apăsarea butonului indicat în imaginea de mai jos.
 
-[<img alt='Imagine demontare imagine' src='assets/images/images/macos/unmount.png' class="noshadow" />](assets/images/images/macos/unmount.png)
+[<img alt='Imagine demontare imagine' src='assets/images/vagrant/macos/unmount.png' class="noshadow" />](assets/images/vagrant/macos/unmount.png)
 
 Din acest moment, utilizarea programului command line `vagrant` va fi posibil folosind aplicația `Terminal.app` (sau `iTerm2.app` sau orice alt emulator terminal preferat). Exemplu de funcționalitate este prezentat mai jos:
 
-[<img alt='Imagine execuție vagrant help' src='assets/images/images/macos/vagranthelp.png' class="noshadow" />](assets/images/images/macos/vagranthelp.png)
+[<img alt='Imagine execuție vagrant help' src='assets/images/vagrant/macos/vagranthelp.png' class="noshadow" />](assets/images/vagrant/macos/vagranthelp.png)
 
 ### Windows
 
@@ -86,19 +84,19 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 - Instalați Git pentru Windows: [adresa de descărcare](http://msysgit.github.io/)
 - Deschideți, în ordine, _Control Panel_ > _System_ > _Advanced system settings_ > _Environment Variables..._, ca în imaginile ce urmează:
 
-[![Imagine control panel](assets/images/images/windows/control_panel.png)](assets/images/images/windows/control_panel.png)
+[![Imagine control panel](assets/images/vagrant/windows/control_panel.png)](assets/images/vagrant/windows/control_panel.png)
 
-[![Imagine system](assets/images/images/windows/system.png)](assets/images/images/windows/system.png)
+[![Imagine system](assets/images/vagrant/windows/system.png)](assets/images/vagrant/windows/system.png)
 
-[![Imagine system properties](assets/images/images/windows/system_properties.png)](assets/images/images/windows/system_properties.png)
+[![Imagine system properties](assets/images/vagrant/windows/system_properties.png)](assets/images/vagrant/windows/system_properties.png)
 
 - În cele ce urmează, setați PATH-ul urmând pașii din imagini. Selectați _Path_ din _System variables_, apoi click _Edit..._:
 
-[![Imagine path](assets/images/images/windows/path.png)](assets/images/images/windows/path.png)
+[![Imagine path](assets/images/vagrant/windows/path.png)](assets/images/vagrant/windows/path.png)
 
 - În _Variable value_, adaugați la final calea către folderul /bin unde ați instalat git. De obicei, aceasta este C:\Program Files (x86)\Git\bin
 
-[![Imagine edit path](assets/images/images/windows/edit_path.png)](assets/images/images/windows/edit_path.png)
+[![Imagine edit path](assets/images/vagrant/windows/edit_path.png)](assets/images/vagrant/windows/edit_path.png)
 
 **Pas 3**
 
@@ -107,16 +105,16 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 - După restart, puteți verifica în cmd dacă s-a instalat, folosind comanda ```vagrant
 ```
 
-[![Imagine vagrant cmd](assets/images/images/windows/vagrant_cmd.png)](assets/images/images/windows/vagrant_cmd.png)
+[![Imagine vagrant cmd](assets/images/vagrant/windows/vagrant_cmd.png)](assets/images/vagrant/windows/vagrant_cmd.png)
 
 
-## Basic Use
+## Quickstart (101)
 
 **Initializare**
 
 Deși atunci când ați rulat ```vagrant``` în cmd a apărut o listă de comenzi, pentru a seta un server propriu cu ajutorul Vagrant este nevoie doar de câteva dintre ele. Comanda ```vagrant init``` va crea in director un fisier Vagrantfile, ce conține detalii legate de configurare. Este un exercițiu bun să îl deschideți și să parcurgeți conținutul.
 
-[![Imagine vagrant init](assets/images/images/windows/vagrant_init.png)](assets/images/images/windows/vagrant_init.png)
+[![Imagine vagrant init](assets/images/vagrant/windows/vagrant_init.png)](assets/images/vagrant/windows/vagrant_init.png)
 
 **Cum să vă creați propriul server?**
 
@@ -134,7 +132,7 @@ $ vagrant up
 
 La prima rulare a acestei comenzi se crează o mașină virtuală conform configurărilor din fișierul Vagrantfile creat la inițializare. Pentru a verifica la final că mașina este într-adevăr up and running, deschideți VirtualBox și ar trebui să apară ceva asemănător ca în imagine:
 
-[![Imagine vagrant VirtualBox](assets/images/images/windows/vagrant_vb.png)](assets/images/images/windows/vagrant_vb.png)
+[![Imagine vagrant VirtualBox](assets/images/vagrant/windows/vagrant_vb.png)](assets/images/vagrant/windows/vagrant_vb.png)
 
 De asemenea, de fiecare dată când doriți doar să deschideți mașina, se execută comanda ```vagrant up```.
 
@@ -189,6 +187,103 @@ end
 
 Tot ce mai este de făcut mai departe este să porniți mașina cu ```vagrant up``` și s-o folosiți!
 
+## Configurare Avansata
+
+După cum am menționat mai devreme, `vagrant init` va genera un fișier de configurație numit **Vagrantfile**. Acest fișier este realizat în limbajul **ruby**, și va trebui să respecte *regulile de sintaxă* ale acestui limbaj. Opțiunile de configurare urmează următorul tipar `config.vm.<modul> <opțiuni>` unde *modul* reprezintă modulul resonsabil cu resepectiva configurare (Exemplu: "provision", "network") iar *opțiuni* un set de argumente alocate metodei de configurare. Există excepții de la regulă, respectând tiparul `config.vm.<variabilă> = <valoare>` cu anumite opțiuni simple ce necesită doar atribuirea unei valori.
+
+Exemple:
+
+```ruby
+
+Vagrant.configure("2") do |config|
+
+    # Setarea tipului de *box* folosit
+    config.vm.box = "ubuntu/trusty32"
+
+    # Setarea unui canal de provisioning sub forma unui fișier de configurare (explicat mai târziu)
+    config.vm.provision :shell, path: "configure"
+
+    # Setarea unui canal de provisioning sub forma unei secvențe de instrucțiuni (explicat mai târziu)
+    config.vm.provision :shell, inline: <<-SHELL
+        sudo apt-get update
+    SHELL
+
+    # Setarea unui alt punct de montare pentru un fișier aparținând sistemului de operare gazdă
+    config.vm.synced_folder "../", "/tutorial"
+
+    # Setarea unei configurații de tipul *port forward* (explicat mai târziu)
+    config.vm.network "forwarded_port", guest: 8000, host: 9000
+end
+```
+
+## Provisioning
+
+Provisioning este modul prin care *Vagrant* pregătește mașina virtuală la fiecare instanțiere. Provisioning-ul se realizează fie printr-un sistem specializat precum **Docker** și **Salt** ([lista completă](http://docs.vagrantup.com/v2/provisioning/index.html)) sau script-uri shell. Pentru scopul acestui tutorial, ne vom limita la a folosi script-uri shell. Acestea pot fi declarate în două moduri diferite, fie printr-un *fișier* (exemplu: `config.vm.provision :shell, path: "configure"`), fie printr-un *string inline* (exemplu: `config.vm.provision :shell, inline: "sudo apt-get update"`). Un exemplu avansat de script de provisioning poate fi găsit în repositorul git al acestui tutorial la [această adresă](https://github.com/sabinmarcu/vagrant-tutorial/tree/master), în folder-ul **advanced** ([link direct](https://github.com/sabinmarcu/vagrant-tutorial/tree/master/advanced)). Acest script este numit **configure**, și, printre funcții auxiliare și de formatare, veți găsi metode ce verifică dacă un anumit software este prezent pe mașina virtuală, și încearcă să îl obțină și să îl instaleze, folosind metode diferite pe sisteme de operare diferite. Acest script a fost testat pe o mașină *Ubuntu* și una *Mac OS X* oână la momentul de față. O variantă simplificată a acestui script poate fi găsit în folder-ul în folder-ul **portforward** ([link direct](https://github.com/sabinmarcu/vagrant-tutorial/tree/master/portforward)).
+
+De obicei, când se intenționează folosirea unui singur tip de sistem de operare cu *Vagrant*, configurarea este mult mai simplă.
+Exemplu:
+
+```bash
+#!/bin/bash
+
+apt-get update              &> /dev/null || sudo apt-get update             &> /dev/null
+apt-get install python2.7   &> /dev/null || sudo apt-get install python2.7  &> /dev/null
+apt-get install screen      &> /dev/null || sudo apt-get install screen     &> /dev/null
+```
+
+Pentru configurarea provisioning-ului există câteva opțiuni suplimentare ce se pot dovedi utile, printre care:
+
+* `keep_color: true` ce va asigura că Vagrant nu va colora diferit output-ul provisioning-ului (folosirea culorilor în mesajele emise de un provisioning pot fi foarte utile în depanarea script-ului sau mentenanță)
+
+* `run: "always"` ce va asigura că Vagrant va rula acest script la fiecare pornire a mașinii virtuale, nu numai la prima rulare sau când este specificat cu argumentul `--provision` (`vagrant up --provision` / `vagrant provision` / `vagrant reload --provision`)
+
+* `privileged: false` ce va asigura că Vagrant nu va rula acest script sub cont de administrație (root); folosirea argumentului cu valoare adevărată va asigura rularea script-ului cu permisie elevată
+
+Exemplu:
+
+```ruby
+Vagrant.configure(2) do |config|
+
+	# ...
+
+	config.vm.provision :shell, path: "run", privileged: false, keep_color: true, run: "always"
+
+end
+```
+
+## Foldere sincronizate
+
+Vagrant are posibilitatea de a sincroniza foldere din mașina gazdă cu cea virtuală. Pentru orice mașină Vagrant există cel puțin o asemenea sincronizare, între folder-ul în care se află fișierul **Vagrantfile** pe *mașina gazdă* și calea `/vagrant` pe mașina virtuală. Asemenea sincronizări adiționale se pot specifica în fișierul **Vagrantfile** ca în exemplul următor: 
+
+```ruby
+
+Vagrant.configure("2") do |config|
+
+  # ...
+  config.vm.synced_folder "~/Desktop", "/host_desktop"
+
+end
+```
+
+Exemplul de mai sus va sincroniza folderul **Desktop** al utlizatorului curent (se presupune folosirea unui sistem de operare Unix) cu calea `/host_desktop` a mașinii virtuale.
+
 ## Port Forwarding
 
-După cum am arătat mai sus, în configurarea unei mașini Vagrant, există opțiunea de a face `port forwarding`.
+După cum am arătat mai sus, în configurarea unei mașini Vagrant, există opțiunea de a face *port forwarding*. Port forwarding este un mapping între port-uri deschise pe mașina virtuală și pe *host*, sau mașina de pe care este rulată cea virtuală. Această opțiune este foarte utilă în multe cazuri. Spre exemplu, traficul internet pentru port-ul 80 (http standard) al calculatorului de pe care se lucrează mașina Vagrant poate fi redirecționat direct în mașina virtuală, omițând sistemul de operare de bază, pentru a asigura securitatea și izolarea în mașina virtuală. Un alt exemplu ar fi rulând un server simplu de date pe același port în mai multe mașini virtuale identice, dar cu mapping diferit, pentru a fi preluate in *host* de catre un server de coleție, pentru a asigura o formă de paralelism.
+
+Pentru a utiliza *port forwarding*, este necesar a adăuga o linie suplimentară într-o configurație **Vagrantfile**, ca în exemplul următor, unde port-ul **8000** al *mașinii virtuale* este legat de port-ul **9000** al *mașinii gazdă*:
+
+```ruby
+
+Vagrant.configure("2") do |config|
+
+  #  ... other configuration options
+
+  # Mapping port 8000 on the virtual machine to port 9000 of the host
+  config.vm.network "forwarded_port", guest: 8000, host: 9000
+
+end
+
+```
+
+Un exemplu concret este disponibil în repositorul git al acestui tutorial la [această adresă](https://github.com/sabinmarcu/vagrant-tutorial/tree/master), în folder-ul **portforward** ([link direct](https://github.com/sabinmarcu/vagrant-tutorial/tree/master/portforward)). Acest demo conține două script-uri: `configure` care se a asigura că **python** și **screen** există pe mașina virtuală și este rulat doar *o singură dată*, iar `run` va rula un server simplu http cu python în directorul curent (al mașinii gazdă) în mașina virtuală într-o instanță screen pentru a menține execuția indiferent de activitatea utilizatorului, cât timp mașina rulează. Utilizatorul poate verifica starea server-ului și conectivitatea prin accesarea [adresei din mapping](http://localhost:9000). Folder-ul va conține un fișier HTML ce va afișa la ce port rulează aplicația pe server-ul din mașina virtuală, și la ce port este accesat de utilizator.
