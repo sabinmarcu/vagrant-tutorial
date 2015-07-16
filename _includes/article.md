@@ -82,11 +82,15 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 
 - Vagrant are nevoie de un client SSH, iar Windows 7/8 nu îl contine by default, așa că vom folosi Git.
 - Instalați Git pentru Windows: [adresa de descărcare](http://msysgit.github.io/)
-- Deschideți, în ordine, _Control Panel_ > _System_ > _Advanced system settings_ > _Environment Variables..._, ca în imaginile ce urmează:
+- Deschideți, în ordine, _Control Panel_ > _System_ 
 
 [![Imagine control panel](assets/images/vagrant/windows/control_panel.png)](assets/images/vagrant/windows/control_panel.png)
 
+- _Advanced system settings_ 
+
 [![Imagine system](assets/images/vagrant/windows/system.png)](assets/images/vagrant/windows/system.png)
+
+- _Environment Variables..._
 
 [![Imagine system properties](assets/images/vagrant/windows/system_properties.png)](assets/images/vagrant/windows/system_properties.png)
 
