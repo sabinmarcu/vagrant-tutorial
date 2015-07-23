@@ -1,3 +1,31 @@
+## Introducere
+
+În ultimii ani, virtualizarea și standardizarea mașinilor virtuale a devenit un subiect din ce în ce mai dezbătut, și populat de diferite sisteme ce își doresc a face acest subiect o realitate cât mai accesibilă. Unul dintre aceste sisteme, realizat modular, este **Vagrant**. În următoarele rânduri vom vorbi despre ce este mai exact Vagrant, cum funcționează și cum se instaleaza și configurează acest sistem.
+
+### Ce este Vagrant?
+
+Dacă veți căuta pe Google **Vagrant**, veți obține aproximativ următoarea definiție:
+
+![Imagine definiție vagrant](assets/images/vagrant/def.png)
+
+Vagrant este definit ca `o persoană fără un cămin stabilit sau job stabil ce se mută din loc în loc`. Într-un fel, această descriere se potrivește destul de bine software-ului *Vagrant*.
+
+Software-ul Vagrant este un sistem de configurare, distribuție și virtualizare a mediilor de lucru, dezvoltare și publicare. El permite, prin o mulțime de aplicații third-party, configurarea, aprovizionarea și distribuirea ușoară a mașinilor virtuale, cu scopul de a standardiza și ușura pregătirea unui mediu pentru dezvoltarea sau publicarea unei aplicații, sau a obține accesul la unelte necesare lucrului disponibile doar pe anumite sisteme de operare.
+
+Acest proces este descris într-un singur fișier ce poate fi copiat din loc în loc, creând mediul dorit pe orice mașină gazdă (fie fizică, fie virtuală). Mediul creat poate fi atunci modificat în orice mod, iar când este creat din nou, va reveni la starea inițială definită în fișier.
+
+Vagrant nu este o persoană, dar poate călători din loc în loc, fără un cămin anume sau job stabil. Este o soluție pentru omogenizarea mediului de lucru între membrii unei echipe de development, a publicării în paralel a unui software, sau oricărei alte acțiuni ce necesită un punct de plecare predefinit. Vagrant oferă acest punct de plecare într-un mod minimalist și sigură.
+
+### Cum funcționează Vagrant?
+
+Vagrant funcționează printr-o rețea de **mașini virtuale pre-definite** pentru diferite sisteme de operare (Ex: Windows, Ubuntu, Mac OS X, Red Hat, etc.) și diferite versiuni ale acestor sisteme de operare. Vagrant va descărca aceste mașini virtuale pre-definite dorite, și va crea copii ale lor când este nevoie. Aceste mașini de obicei sunt create minimalist, cu un numar minim de utilitare și configurații realizate, pentru a se potrivi unei game cât mai largi de cerințe.
+
+Din acest moment, mașina virtuală copiată va fi **aprovizionată**. Aprovizionarea (sau *Provisioning-ul*) mașinii se realizează prin mai multe moduri, descrise mai jos, scopul fiind pregătirea mașinii pentru lucru, fie prin instalarea soft-urilor necesare, pornirea unor servicii, fie prin legarea elementelor din mașina virtuală cu cele din mașina gazdă (cea care reulează mașina virtuală) precum rețea sau fișiere și foldere.
+
+După ce crearea mașinii virtuale este terminată, ea poate fi pornită. În acest moment se rulează aprovizionarea. Când aprovizionarea este terminată, mașina poate fi accesată fie prin SSH, fie prin alte metode (Ex: pentru VirtualBox, VMWare, etc. mașina poate fi accesată din iterfață serviciului).
+
+Informațiile necesare creeri și aprovizionării unei astfel de mașini sunt stocate într-un fișier numit *Vagrantfile*. Acest fișier poate fi pur și simplu transferat pe o altă mașină (fizică sau virtuală) de unde tot procesul poate fi reluat fără nici o modificare, fără a necesita decât prezența unei instalații Vagrant și a provider-ului (VirtualBox, VMWare, etc).
+
 ## Instalare
 
 Înainte de a începe instalarea **Vagrant** trebuie să ne asigurăm că Vagrant va avea un sistem de mașini virtuale pe care îl va putea folosi. Vagrant suportă un numar de astfel de sisteme printre care și: *VirtualBox*, *VMWare*, *Docker*, *Hyper-V*, etc. Conexiunea pentru aceste sisteme se realizează prin plugin-uri numite *Provideri*. Vagrant vine pre-instalat cu suport pentru *VirtualBox*, iar suportul pentru alte platforme (platforme care de obicei necesită licență plătită) este de obicei oferit contra-cost.
@@ -82,11 +110,11 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 
 - Vagrant are nevoie de un client SSH, iar Windows 7/8 nu îl contine by default, așa că vom folosi Git.
 - Instalați Git pentru Windows: [adresa de descărcare](http://msysgit.github.io/)
-- Deschideți, în ordine, _Control Panel_ > _System_ 
+- Deschideți, în ordine, _Control Panel_ > _System_
 
 [![Imagine control panel](assets/images/vagrant/windows/control_panel.png)](assets/images/vagrant/windows/control_panel.png)
 
-- _Advanced system settings_ 
+- _Advanced system settings_
 
 [![Imagine system](assets/images/vagrant/windows/system.png)](assets/images/vagrant/windows/system.png)
 
@@ -160,7 +188,7 @@ Aceasta va deschide un shell în Unbuntu, adică în mașina ce tocmai am instal
 
 Sfat și mic exercițiu: deschideți un Command Prompt și rulați ``` vagrant ``` pentru a vedea lista tuturor comenzilor disponibile Și o scurtă descriere pentru fiecare, apoi rulați fiecare comandă afișată cu opțiunea ``` -h ``` (de exemplu, pentru ``` init ```, rulați ``` vagrant init -h ``` și așa mai departe cu toate).
 
-## _Box_-uri posibile
+### _Box_-uri posibile
 
 După cum ați văzut mai sus, pentru a inițializa o mașină, s-a rulat comanda ```vagrant init ubuntu/trusty64```, iar aceasta înseamnă că s-a clonat o mașină virtuală pe care s-a instalt Ubuntu. Vagrant folosește multe astfel de imagini, din care puteam alege ce avea nevoie. Acestea poartă denumirea de _boxes_.
 
@@ -220,7 +248,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-## Provisioning
+### Provisioning
 
 Provisioning este modul prin care *Vagrant* pregătește mașina virtuală la fiecare instanțiere. Provisioning-ul se realizează fie printr-un sistem specializat precum **Docker** și **Salt** ([lista completă](http://docs.vagrantup.com/v2/provisioning/index.html)) sau script-uri shell. Pentru scopul acestui tutorial, ne vom limita la a folosi script-uri shell. Acestea pot fi declarate în două moduri diferite, fie printr-un *fișier* (exemplu: `config.vm.provision :shell, path: "configure"`), fie printr-un *string inline* (exemplu: `config.vm.provision :shell, inline: "sudo apt-get update"`). Un exemplu avansat de script de provisioning poate fi găsit în repositorul git al acestui tutorial la [această adresă](https://github.com/sabinmarcu/vagrant-tutorial/tree/master), în folder-ul **advanced** ([link direct](https://github.com/sabinmarcu/vagrant-tutorial/tree/master/advanced)). Acest script este numit **configure**, și, printre funcții auxiliare și de formatare, veți găsi metode ce verifică dacă un anumit software este prezent pe mașina virtuală, și încearcă să îl obțină și să îl instaleze, folosind metode diferite pe sisteme de operare diferite. Acest script a fost testat pe o mașină *Ubuntu* și una *Mac OS X* oână la momentul de față. O variantă simplificată a acestui script poate fi găsit în folder-ul în folder-ul **portforward** ([link direct](https://github.com/sabinmarcu/vagrant-tutorial/tree/master/portforward)).
 
@@ -255,9 +283,9 @@ Vagrant.configure(2) do |config|
 end
 ```
 
-## Foldere sincronizate
+### Foldere sincronizate
 
-Vagrant are posibilitatea de a sincroniza foldere din mașina gazdă cu cea virtuală. Pentru orice mașină Vagrant există cel puțin o asemenea sincronizare, între folder-ul în care se află fișierul **Vagrantfile** pe *mașina gazdă* și calea `/vagrant` pe mașina virtuală. Asemenea sincronizări adiționale se pot specifica în fișierul **Vagrantfile** ca în exemplul următor: 
+Vagrant are posibilitatea de a sincroniza foldere din mașina gazdă cu cea virtuală. Pentru orice mașină Vagrant există cel puțin o asemenea sincronizare, între folder-ul în care se află fișierul **Vagrantfile** pe *mașina gazdă* și calea `/vagrant` pe mașina virtuală. Asemenea sincronizări adiționale se pot specifica în fișierul **Vagrantfile** ca în exemplul următor:
 
 ```ruby
 
@@ -271,7 +299,7 @@ end
 
 Exemplul de mai sus va sincroniza folderul **Desktop** al utlizatorului curent (se presupune folosirea unui sistem de operare Unix) cu calea `/host_desktop` a mașinii virtuale.
 
-## Port Forwarding
+### Port Forwarding
 
 După cum am arătat mai sus, în configurarea unei mașini Vagrant, există opțiunea de a face *port forwarding*. Port forwarding este un mapping între port-uri deschise pe mașina virtuală și pe *host*, sau mașina de pe care este rulată cea virtuală. Această opțiune este foarte utilă în multe cazuri. Spre exemplu, traficul internet pentru port-ul 80 (http standard) al calculatorului de pe care se lucrează mașina Vagrant poate fi redirecționat direct în mașina virtuală, omițând sistemul de operare de bază, pentru a asigura securitatea și izolarea în mașina virtuală. Un alt exemplu ar fi rulând un server simplu de date pe același port în mai multe mașini virtuale identice, dar cu mapping diferit, pentru a fi preluate in *host* de catre un server de coleție, pentru a asigura o formă de paralelism.
 
