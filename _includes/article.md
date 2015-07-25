@@ -100,7 +100,7 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 
 ### Windows
 
-Pentru început, instalați VirtualBox, versiunea pentru Windows! Se poate descărca de aici: [adresa de descărcare](https://www.virtualbox.org/wiki/Downloads)
+Pentru început, instalați VirtualBox, versiunea pentru Windows! Se poate descărca de  [aici](https://www.virtualbox.org/wiki/Downloads)
 
 După aceasta, instalați Vagrant, versiunea de Windows, ce se găsește [aici](http://www.vagrantup.com/downloads.html). Instalarea este simplă, urmând tiparul obisnuit de _Next_, _Next_, ... _Finish_. După instalare, windows-ul va cere un restart pentru a ajuta Vagrant-ul să-și creeze configurările, iar după restart, puteți verifica în cmd dacă s-a instalat, folosind comanda ```vagrant```. Dacă totul a decurs bine, va trebui să se afișeze ceva asemănător cu ce este în imaginea următoare:
 
