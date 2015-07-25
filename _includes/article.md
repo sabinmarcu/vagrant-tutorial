@@ -104,33 +104,7 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 
 - Instalați VirtualBox, versiunea pentru Windows! Se poate descărca de aici: [adresa de descărcare](https://www.virtualbox.org/wiki/Downloads)
 
-
-
 **Pas 2**
-
-- Vagrant are nevoie de un client SSH, iar Windows 7/8 nu îl contine by default, așa că vom folosi Git.
-- Instalați Git pentru Windows: [adresa de descărcare](http://msysgit.github.io/)
-- Deschideți, în ordine, _Control Panel_ > _System_
-
-[![Imagine control panel](assets/images/vagrant/windows/control_panel.png)](assets/images/vagrant/windows/control_panel.png)
-
-- _Advanced system settings_
-
-[![Imagine system](assets/images/vagrant/windows/system.png)](assets/images/vagrant/windows/system.png)
-
-- _Environment Variables..._
-
-[![Imagine system properties](assets/images/vagrant/windows/system_properties.png)](assets/images/vagrant/windows/system_properties.png)
-
-- În cele ce urmează, setați PATH-ul urmând pașii din imagini. Selectați _Path_ din _System variables_, apoi click _Edit..._:
-
-[![Imagine path](assets/images/vagrant/windows/path.png)](assets/images/vagrant/windows/path.png)
-
-- În _Variable value_, adaugați la final calea către folderul /bin unde ați instalat git. De obicei, aceasta este C:\Program Files (x86)\Git\bin
-
-[![Imagine edit path](assets/images/vagrant/windows/edit_path.png)](assets/images/vagrant/windows/edit_path.png)
-
-**Pas 3**
 
 - Instalați Vagrant, versiunea de Windows: [adresa de descărcare a site-ului](http://www.vagrantup.com/downloads.html)
 - După instalare, windows-ul va cere un restart pentru a-și crea configurările
@@ -138,6 +112,12 @@ Din acest moment, utilizarea programului command line `vagrant` va fi posibil fo
 ```
 
 [![Imagine vagrant cmd](assets/images/vagrant/windows/vagrant_cmd.png)](assets/images/vagrant/windows/vagrant_cmd.png)
+
+**Pas 3**
+
+Vagrant are nevoie de un client SSH, iar Windows 7/8 nu îl contine by default, așa că vom folosi Putty. Pentru a-l avea, trebuie doar să-l descărcați de pe [adresa de download](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) și alegeți ultima versiune pentru Windows (click pe _putty.exe_). Dacă deschideți ceea ce ați descărcat, ar trebui să vă apară o fereastră ce arată cam așa:
+
+[![Imagine putty](assets/images/vagrant/windows/putty.png)](assets/images/vagrant/windows/putty.png)
 
 
 ## Quickstart (101)
@@ -175,6 +155,23 @@ $ vagrant ssh
 ```
 
 Aceasta va deschide un shell în Unbuntu, adică în mașina ce tocmai am instalat-o.
+
+Cu toate acestea, în Windows, comanda `vagrant ssh` va da o eroare, întrucât sistemul de operare nu include un client SSH. De aceea, pentru a accesa shell-ul va trebui să ne folosim de Putty, pe care a trebuit să-l instalăm mai devreme. După ce îl deschidem, introducem datele următoare:
+
+- _Host Name (or IP address)_: 127.0.0.1
+- _Port_: 2222
+- _Connection type_: SSH
+
+[![Imagine putty](assets/images/vagrant/windows/putty_introd.png)](assets/images/vagrant/windows/putty_introd.png)
+
+După ce selectăm _Open_, vom fi întrebați de un username și o parolă. Introduceți _vagrant_ pentru ambele cazuri:
+
+- Login as: vagrant
+- vagrant@127.0.0.1's password: vagrant
+
+Dacă totul este corect, va trebui să apară shell-ul în felul urmator:
+
+[![Imagine putty](assets/images/vagrant/windows/putty_final.png)](assets/images/vagrant/windows/putty_final.png)
 
 **Comenzi utile**
 
